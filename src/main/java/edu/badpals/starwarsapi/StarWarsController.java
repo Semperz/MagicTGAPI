@@ -11,7 +11,7 @@ public class StarWarsController {
 
     @FXML
     void btnClicked(ActionEvent event) {
-            System.out.println("Clicked");
+
     }
 
 }
