@@ -1,4 +1,4 @@
-package edu.badpals.starwarsapi.controller;
+package edu.badpals.magictg.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class listPeopleController implements Initializable {
+public class secondWindowController implements Initializable {
     @FXML
     private Button btnVolver;
 

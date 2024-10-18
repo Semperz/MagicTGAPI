@@ -7,26 +7,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="742.0" prefWidth="1097.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.badpals.starwarsapi.controller.StarWarsController">
+<VBox alignment="CENTER" prefHeight="532.0" prefWidth="896.0" spacing="20.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.badpals.magictg.controller.MainWindowController">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
-   <AnchorPane prefHeight="745.0" prefWidth="1057.0">
+   <AnchorPane prefHeight="500.0" prefWidth="856.0">
       <children>
-         <Label layoutX="97.0" layoutY="89.0" text="Nombre" />
-         <Button fx:id="btnBuscar" layoutX="354.0" layoutY="86.0" mnemonicParsing="false" onAction="#setName" text="Buscar" />
-         <TextField fx:id="name" layoutX="195.0" layoutY="86.0" />
-         <Label layoutX="100.0" layoutY="294.0" text="Color de ojos" />
-         <Label layoutX="100.0" layoutY="139.0" text="Genero" />
-         <Label layoutX="99.0" layoutY="256.0" text="Color de pelo" />
-         <Label layoutX="96.0" layoutY="217.0" text="Altura" />
-         <Label layoutX="97.0" layoutY="177.0" text="Masa" />
-         <Label fx:id="gender" layoutX="196.0" layoutY="135.0" prefHeight="26.0" prefWidth="152.0" />
-         <Label fx:id="mass" layoutX="202.0" layoutY="173.0" prefHeight="26.0" prefWidth="152.0" />
-         <Label fx:id="hairColor" layoutX="194.0" layoutY="252.0" prefHeight="26.0" prefWidth="152.0" />
-         <Label fx:id="height" layoutX="194.0" layoutY="213.0" prefHeight="26.0" prefWidth="152.0" />
-         <Label fx:id="eyeColor" layoutX="202.0" layoutY="290.0" prefHeight="26.0" prefWidth="152.0" />
-         <Button fx:id="btnPeople" layoutX="904.0" layoutY="591.0" mnemonicParsing="false" onAction="#toPeopleList" text="People list" />
+         <Label fx:id="name" layoutX="114.0" layoutY="90.0" text="Name" />
+         <Button fx:id="btnBuscar" layoutX="354.0" layoutY="86.0" mnemonicParsing="false" onAction="#setNameCard" text="Buscar" />
+         <TextField fx:id="search" layoutX="195.0" layoutY="86.0" />
+         <Label fx:id="lblToughtness" layoutX="100.0" layoutY="294.0" prefHeight="18.0" prefWidth="65.0" text="Toughtness" />
+         <Label fx:id="lblManaCost" layoutX="108.0" layoutY="139.0" text="Mana cost" />
+         <Label fx:id="lblColors" layoutX="118.0" layoutY="177.0" text="Colors" />
+         <Label fx:id="lblType" layoutX="120.0" layoutY="217.0" text="Type" />
+         <Label fx:id="lblPower" layoutX="116.0" layoutY="256.0" text="Power" />
+         <Label fx:id="manaCost" layoutX="196.0" layoutY="135.0" prefHeight="26.0" prefWidth="152.0" />
+         <Label fx:id="colors" layoutX="202.0" layoutY="173.0" prefHeight="26.0" prefWidth="152.0" />
+         <Label fx:id="power" layoutX="194.0" layoutY="252.0" prefHeight="26.0" prefWidth="152.0" />
+         <Label fx:id="type" layoutX="194.0" layoutY="213.0" prefHeight="26.0" prefWidth="152.0" />
+         <Label fx:id="toughtness" layoutX="202.0" layoutY="290.0" prefHeight="26.0" prefWidth="152.0" />
+         <Button fx:id="btnPeople" layoutX="114.0" layoutY="370.0" mnemonicParsing="false" onAction="#toPeopleList" text="Advanced Details" />
       </children>
    </AnchorPane>
 </VBox>

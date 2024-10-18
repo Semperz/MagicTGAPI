@@ -5,13 +5,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>edu.badpals</groupId>
-  <artifactId>StarWarsAPI</artifactId>
+  <artifactId>MagicTGAPI</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>StarWarsAPI</name>
+  <name>MagicTGAPI</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-<junit.version>5.10.2</junit.version>  </properties>
+  <junit.version>5.10.2</junit.version>  </properties>
 
   <dependencies>
     <dependency>
@@ -68,7 +68,7 @@
             <!-- Default configuration for running with: mvn clean javafx:run -->
             <id>default-cli</id>
             <configuration>
-              <mainClass>edu.badpals.starwarsapi/edu.badpals.starwarsapi.Main</mainClass>
+              <mainClass>edu.badpals.magictg.Main</mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>
               <jlinkImageName>app</jlinkImageName>

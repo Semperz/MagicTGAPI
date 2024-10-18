@@ -1,4 +1,4 @@
-package edu.badpals.starwarsapi;
+package edu.badpals.magictg;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/mainView.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("¡¡Star Wars Api!!");
+        stage.setTitle("¡¡Magic The Gathering Api!!");
         stage.setScene(scene);
         stage.show();
 

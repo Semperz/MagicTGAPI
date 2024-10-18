@@ -1,8 +1,8 @@
-package edu.badpals.starwarsapi.controller;
+package edu.badpals.magictg.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import edu.badpals.starwarsapi.model.people.People;
-import edu.badpals.starwarsapi.model.people.PeopleResponse;
+import edu.badpals.magictg.model.Cards;
+import edu.badpals.magictg.model.Response;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,39 +14,37 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ResourceBundle;
 
-public class StarWarsController implements Initializable {
+public class MainWindowController implements Initializable {
 
-    private final String characterURL = "https://swapi.dev/api/people/?search=";
+    private final String characterURL = "https://api.magicthegathering.io/v1/cards?name=";
 
     @FXML
     private Button btnBuscar;
 
     @FXML
-    private TextField name;
+    private TextField search;
 
     @FXML
-    private Label gender;
+    private Label manaCost;
 
     @FXML
-    private Label mass;
+    private Label colors;
 
     @FXML
-    private Label height;
+    private Label type;
 
     @FXML
-    private Label hairColor;
+    private Label power;
 
     @FXML
-    private Label eyeColor;
+    private Label toughtness;
 
     @FXML
     private Button btnPeople;
@@ -55,24 +53,21 @@ public class StarWarsController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
     }
-
     @FXML
-    public void setName(ActionEvent event) {
+    public void setNameCard(ActionEvent event) {
         try {
-            String nameInput = URLEncoder.encode(name.getText(), StandardCharsets.UTF_8.toString());
+            String nameInput = URLEncoder.encode(search.getText(), StandardCharsets.UTF_8.toString());
             URL jsonURL = new URL(characterURL + nameInput);
-            /*URL jsonURL = new URL("https://swapi.dev/api/people/?search=Luke%20Skywalker");*/
             HttpURLConnection connection = (HttpURLConnection) jsonURL.openConnection();
             connection.setRequestMethod("GET");
                 ObjectMapper objectMapper = new ObjectMapper();
-                People response = objectMapper.readValue(connection.getInputStream(), People.class);
-                response.getResults().stream().forEach(System.out::println);
-                PeopleResponse fisrstPeople = (PeopleResponse) response.getResults().get(0);
-                gender.setText(String.valueOf(fisrstPeople.getGender()));
-                height.setText(String.valueOf(fisrstPeople.getHeight()));
-                mass.setText(String.valueOf(fisrstPeople.getMass()));
-                hairColor.setText(String.valueOf(fisrstPeople.getHairColor()));
-                eyeColor.setText(String.valueOf(fisrstPeople.getEyeColor()));
+                Response response = objectMapper.readValue(connection.getInputStream(), Response.class);
+                Cards card =  response.getCards().get(0);
+                manaCost.setText(String.valueOf(card.getManaCost()));
+                colors.setText(String.valueOf(card.getColors()));
+                type.setText(String.valueOf(card.getType()));
+                power.setText(String.valueOf(card.getPower()));
+                toughtness.setText(String.valueOf(card.getToughness()));
 
 
         } catch (IOException e) {
