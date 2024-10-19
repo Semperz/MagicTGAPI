@@ -87,7 +87,7 @@ public class MainWindowController implements Initializable {
                 power.setText(card.getPower() != null ? String.valueOf(card.getPower()) : "esta carta no tiene valor de ataque");
 
                 // Verifica si la resistencia es nula
-                toughness.setText(card.getToughness() != null ? String.valueOf(card.getToughness()) : "esta carta no tiene valor de defensa");
+                toughness.setText(card.getToughness() != null ? String.valueOf(card.getToughness()) : "esta carta no tiene valor de resistencia");
 
                 // Aquí obtienes la URL de la imagen desde la API o el objeto `Cards`
                 String imageUrl = card.getImageUrl();
