@@ -198,6 +198,41 @@ public class MainWindowController implements Initializable {
                         formattedMana.append(totalCount).append(" Colorless");
                         isFirstColor = false;
                         break;
+                    case "R/P":
+                        if (!isFirstColor || hasAddedColorless) {
+                            formattedMana.append(", ");
+                        }
+                        formattedMana.append(totalCount).append(" Phyrexian Red");
+                        isFirstColor = false;
+                        break;
+                    case "U/P":
+                        if (!isFirstColor || hasAddedColorless) {
+                            formattedMana.append(", ");
+                        }
+                        formattedMana.append(totalCount).append(" Phyrexian Blue");
+                        isFirstColor = false;
+                        break;
+                    case "W/P":
+                        if (!isFirstColor || hasAddedColorless) {
+                            formattedMana.append(", ");
+                        }
+                        formattedMana.append(totalCount).append(" Phyrexian White");
+                        isFirstColor = false;
+                        break;
+                    case "B/P":
+                        if (!isFirstColor || hasAddedColorless) {
+                            formattedMana.append(", ");
+                        }
+                        formattedMana.append(totalCount).append(" Phyrexian Black");
+                        isFirstColor = false;
+                        break;
+                    case "G/P":
+                        if (!isFirstColor || hasAddedColorless) {
+                            formattedMana.append(", ");
+                        }
+                        formattedMana.append(totalCount).append(" Phyrexian Green");
+                        isFirstColor = false;
+                        break;
                 }
             }
             return formattedMana.toString();
