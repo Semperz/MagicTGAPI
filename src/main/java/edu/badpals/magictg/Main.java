@@ -1,21 +1,12 @@
 package edu.badpals.magictg;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import edu.badpals.magictg.encryption.EncryptionUtil;
-import edu.badpals.magictg.users.User;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
-import javax.crypto.SecretKey;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.util.List;
+
 
 public class Main extends Application {
     @Override
