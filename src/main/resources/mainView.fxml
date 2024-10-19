@@ -13,24 +13,21 @@
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
     <AnchorPane prefHeight="692.0" prefWidth="1065.0">
-        <Label fx:id="name" layoutX="51.0" layoutY="44.0" text="Name"/>
-        <Button fx:id="btnBuscar" layoutX="309.0" layoutY="40.0" mnemonicParsing="false" onAction="#setNameCard"
-                text="Buscar"/>
-        <TextField fx:id="search" layoutX="125.0" layoutY="40.0" prefHeight="26.0" prefWidth="174.0"/>
-        <Label fx:id="lblToughtness" layoutX="34.0" layoutY="269.0" prefHeight="18.0" prefWidth="65.0"
-               text="Toughness"/>
-        <Label fx:id="lblManaCost" layoutX="39.0" layoutY="89.0" text="Mana cost"/>
-        <Label fx:id="lblColors" layoutX="49.0" layoutY="134.0" text="Colors"/>
-        <Label fx:id="lblType" layoutX="51.0" layoutY="179.0" text="Type"/>
-        <Label fx:id="lblPower" layoutX="47.0" layoutY="224.0" text="Power"/>
-        <Label fx:id="manaCost" layoutX="125.0" layoutY="85.0" prefHeight="26.0" prefWidth="306.0"/>
-        <Label fx:id="colors" layoutX="125.0" layoutY="130.0" prefHeight="26.0" prefWidth="306.0"/>
-        <Label fx:id="power" layoutX="125.0" layoutY="220.0" prefHeight="26.0" prefWidth="306.0"/>
-        <Label fx:id="type" layoutX="125.0" layoutY="175.0" prefHeight="26.0" prefWidth="306.0"/>
-        <Label fx:id="toughness" layoutX="125.0" layoutY="265.0" prefHeight="26.0" prefWidth="306.0"/>
-        <Button fx:id="btnPeople" layoutX="908.0" layoutY="650.0" mnemonicParsing="false" onAction="#toPeopleList"
-                text="Advanced Details"/>
-        <ImageView fx:id="cardView" fitHeight="610.0" fitWidth="585.0" layoutX="418.0" layoutY="14.0"
-                   pickOnBounds="true" preserveRatio="true"/>
+        <Label fx:id="name" layoutX="51.0" layoutY="44.0" text="Name" />
+        <Button fx:id="btnBuscar" layoutX="309.0" layoutY="40.0" mnemonicParsing="false" onAction="#setNameCard" text="Buscar" />
+        <TextField fx:id="search" layoutX="125.0" layoutY="40.0" prefHeight="26.0" prefWidth="174.0" />
+        <Label fx:id="lblToughtness" layoutX="34.0" layoutY="269.0" prefHeight="18.0" prefWidth="65.0" text="Toughness" />
+        <Label fx:id="lblManaCost" layoutX="39.0" layoutY="89.0" text="Mana cost" />
+        <Label fx:id="lblColors" layoutX="49.0" layoutY="134.0" text="Colors" />
+        <Label fx:id="lblType" layoutX="51.0" layoutY="179.0" text="Type" />
+        <Label fx:id="lblPower" layoutX="47.0" layoutY="224.0" text="Power" />
+        <Label fx:id="manaCost" layoutX="125.0" layoutY="85.0" prefHeight="26.0" prefWidth="306.0" />
+        <Label fx:id="colors" layoutX="125.0" layoutY="130.0" prefHeight="26.0" prefWidth="306.0" />
+        <Label fx:id="power" layoutX="125.0" layoutY="220.0" prefHeight="26.0" prefWidth="306.0" />
+        <Label fx:id="type" layoutX="125.0" layoutY="175.0" prefHeight="26.0" prefWidth="306.0" />
+        <Label fx:id="toughness" layoutX="125.0" layoutY="265.0" prefHeight="26.0" prefWidth="306.0" />
+        <Button fx:id="btnPeople" layoutX="908.0" layoutY="650.0" mnemonicParsing="false" onAction="#toPeopleList" text="Advanced Details" />
+        <ImageView fx:id="cardView" fitHeight="610.0" fitWidth="585.0" layoutX="418.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="returnToLogIn" layoutX="23.0" layoutY="624.0" mnemonicParsing="false" text="Volver al Log In" onAction="#toLogin" />
     </AnchorPane>
 </VBox>

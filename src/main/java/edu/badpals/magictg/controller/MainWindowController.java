@@ -53,6 +53,9 @@ public class MainWindowController implements Initializable {
     @FXML
     private Button btnPeople;
 
+    @FXML
+    private Button returnToLogIn;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -126,6 +129,13 @@ public class MainWindowController implements Initializable {
                 if (colorlessPart.matches("\\d+")) { // \\d+ significa "uno o más dígitos"
                     formattedMana.append(colorlessPart).append(" generic");
                 }
+
+                if (colorlessPart.equals("X")) {
+                    formattedMana.append("X mana cost");
+                }
+
+            } else {
+                    return noMana;
                 // Si no es un número, no hacemos nada
             }
             // Usar un mapa para contar los colores
@@ -270,6 +280,29 @@ public class MainWindowController implements Initializable {
             // Obtener la ventana actual (stage) y cambiar la escena
             Stage stage = (Stage) btnPeople.getScene().getWindow();
             stage.setScene(new Scene(root));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void toLogin(ActionEvent event) {
+        try {
+            // Cargar la nueva vista desde el archivo FXML
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/logIn.fxml"));
+            Parent root = loader.load();
+
+            // Obtener la ventana actual (stage) desde el botón o la escena activa
+            Stage stage = (Stage) returnToLogIn.getScene().getWindow();
+
+            // Configurar la nueva escena y ajustar tamaño mínimo
+            stage.setScene(new Scene(root));
+            stage.setMinWidth(369.6);
+            stage.setMinHeight(370.4);
+
+            // Centrar la ventana en pantalla
+            stage.centerOnScreen();
 
         } catch (IOException e) {
             e.printStackTrace();
