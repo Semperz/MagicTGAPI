@@ -26,7 +26,7 @@
         <Label fx:id="power" layoutX="125.0" layoutY="220.0" prefHeight="26.0" prefWidth="306.0" />
         <Label fx:id="type" layoutX="125.0" layoutY="175.0" prefHeight="26.0" prefWidth="306.0" />
         <Label fx:id="toughness" layoutX="125.0" layoutY="265.0" prefHeight="26.0" prefWidth="306.0" />
-        <Button fx:id="btnPeople" layoutX="908.0" layoutY="650.0" mnemonicParsing="false" onAction="#toPeopleList" text="Advanced Details" />
+        <Button fx:id="btnPeople" layoutX="908.0" layoutY="650.0" mnemonicParsing="false" onAction="#toExportView" text="ExportData" />
         <ImageView fx:id="cardView" fitHeight="610.0" fitWidth="585.0" layoutX="418.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
       <Button fx:id="returnToLogIn" layoutX="23.0" layoutY="624.0" mnemonicParsing="false" onAction="#toLogin" text="Volver al Log In" />
       <Button fx:id="btnSalir" layoutX="-12.0" layoutY="-13.0" mnemonicParsing="false" onAction="#closeApp" text="Salir" />

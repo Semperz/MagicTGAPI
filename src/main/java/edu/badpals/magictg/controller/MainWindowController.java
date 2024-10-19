@@ -16,7 +16,10 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import javafx.scene.image.ImageView;
+
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
@@ -29,6 +32,9 @@ public class MainWindowController implements Initializable {
     @FXML
     private Button btnBuscar;
 
+    private String apiData;
+
+    private final String CHARACTER_URL = "https://api.magicthegathering.io/v1/cards?name=";
     @FXML
     private TextField search;
 
@@ -63,9 +69,10 @@ public class MainWindowController implements Initializable {
     @FXML
     public void setNameCard(ActionEvent event) {
         try {
+            apiData = fetchApiData();
             String nameInput = URLEncoder.encode(search.getText(), StandardCharsets.UTF_8);
-            String characterURL = "https://api.magicthegathering.io/v1/cards?name=";
-            URL jsonURL = new URL(characterURL + nameInput);
+
+            URL jsonURL = new URL(CHARACTER_URL + nameInput);
             HttpURLConnection connection = (HttpURLConnection) jsonURL.openConnection();
             connection.setRequestMethod("GET");
 
@@ -270,11 +277,15 @@ public class MainWindowController implements Initializable {
     }
 
     @FXML
-    public void toPeopleList(ActionEvent event) {
+    public void toExportView(ActionEvent event) {
 
         try {
+            if (apiData != null && !apiData.isEmpty()) {
+                // Pasar los datos de la API a la escena de exportación
+                secondWindowController.setApiData(apiData);
+            }
             // Cargar la nueva vista desde el archivo FXML
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/listPeople.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/exportView.fxml"));
             Parent root = loader.load();
 
             // Obtener la ventana actual (stage) y cambiar la escena
@@ -315,4 +326,26 @@ public class MainWindowController implements Initializable {
         // Cerrar la ventana
         stage.close();
     }
+
+    private String fetchApiData() {
+        StringBuilder result = new StringBuilder();
+        try {
+            String nameInput = URLEncoder.encode(search.getText(), StandardCharsets.UTF_8);
+            URL url = new URL(CHARACTER_URL + nameInput);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+
+            BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String line;
+            while ((line = rd.readLine()) != null) {
+                result.append(line);
+            }
+            rd.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return result.toString();  // Retornar el JSON recibido
+    }
+
 }
