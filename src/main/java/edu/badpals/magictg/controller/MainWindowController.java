@@ -309,5 +309,10 @@ public class MainWindowController implements Initializable {
         }
     }
 
-
+    public void closeApp(ActionEvent actionEvent) {
+        // Obtener la ventana (Stage) actual
+        Stage stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
+        // Cerrar la ventana
+        stage.close();
+    }
 }
