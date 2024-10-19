@@ -96,8 +96,12 @@ public class Cards {
 		return number;
 	}
 
-	public String getImageUrl(){
+	public String getImageUrl() {
 		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
 	}
 
 	public String getName(){
