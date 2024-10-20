@@ -41,6 +41,7 @@ public class secondWindowController implements Initializable {
             // Obtener la ventana actual (stage) y cambiar la escena
             Stage stage = (Stage) btnVolver.getScene().getWindow();
             stage.setScene(new Scene(root));
+            stage.centerOnScreen();
 
         } catch (IOException e) {
             e.printStackTrace();

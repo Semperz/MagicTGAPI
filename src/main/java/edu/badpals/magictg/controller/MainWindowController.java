@@ -291,6 +291,7 @@ public class MainWindowController implements Initializable {
             // Obtener la ventana actual (stage) y cambiar la escena
             Stage stage = (Stage) btnPeople.getScene().getWindow();
             stage.setScene(new Scene(root));
+            stage.centerOnScreen();
 
         } catch (IOException e) {
             e.printStackTrace();
