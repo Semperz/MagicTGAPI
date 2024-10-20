@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<selectedCard>
+    <cards>
+        <name>Force of Negation</name>
+        <manaCost>{1}{U}{U}</manaCost>
+        <cmc>3.0</cmc>
+        <colors>
+            <value>U</value>
+        </colors>
+        <colorIdentity>
+            <value>U</value>
+        </colorIdentity>
+        <type>Instant</type>
+        <types>
+            <value>Instant</value>
+        </types>
+        <rarity>Rare</rarity>
+        <set>2X2</set>
+        <setName>Double Masters 2022</setName>
+        <text>If it's not your turn, you may exile a blue card from your hand rather than pay this spell's mana cost.
+Counter target noncreature spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.</text>
+        <flavor>"Try, if you must."</flavor>
+        <artist>Paul Scott Canavan</artist>
+        <number>50</number>
+        <layout>normal</layout>
+        <multiverseid>571383</multiverseid>
+        <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=571383&amp;type=card</imageUrl>
+        <variations>
+            <value>e6f88c32-1836-5add-8995-9b18d6f7b34b</value>
+            <value>3ccbf5e8-fc80-5256-956b-6da4542397ee</value>
+        </variations>
+        <foreignNames>
+            <name>Negierungskraft</name>
+            <text>Falls es nicht dein Zug ist, kannst du eine blaue Karte aus deiner Hand ins Exil schicken, anstatt die Manakosten dieses Zauberspruchs zu bezahlen.
+Neutralisiere einen Nichtkreatur-Zauberspruch deiner Wahl. Falls der Zauberspruch auf diese Weise neutralisiert wird, schicke ihn ins Exil, anstatt ihn auf den Friedhof seines Besitzers zu legen.</text>
+            <type>Spontanzauber</type>
+            <flavor>„Versuche es, wenn du unbedingt musst."</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=571714&amp;type=card</imageUrl>
+            <language>German</language>
+            <identifiers>
+                <scryfallId>6e1728c5-4106-407d-a171-f5cf17c9068a</scryfallId>
+                <multiverseId>571714</multiverseId>
+            </identifiers>
+            <multiverseid>571714</multiverseid>
+            <name>Force de négation</name>
+            <text>Si ce n'est pas votre tour, vous pouvez exiler une carte bleue de votre main à la place de payer le coût de mana de ce sort.
+Contrecarrez un sort non-créature ciblé. Si ce sort est contrecarré de cette manière, exilez-le à la place de le mettre dans le cimetière de son propriétaire.</text>
+            <type>Éphémère</type>
+            <flavor>« Essayez, si vous insistez. »</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=572045&amp;type=card</imageUrl>
+            <language>French</language>
+            <identifiers>
+                <scryfallId>1eab59c3-fb63-4784-9cea-be550fdeb4e9</scryfallId>
+                <multiverseId>572045</multiverseId>
+            </identifiers>
+            <multiverseid>572045</multiverseid>
+            <name>否定の力</name>
+            <text>あなたのターンでないなら、あなたはこの呪文のマナ・コストを支払うのではなく、あなたの手札にある青のカード１枚を追放してもよい。
+クリーチャーでない呪文１つを対象とする。それを打ち消す。これによりその呪文が打ち消されたなら、それをオーナーの墓地に置く代わりに追放する。</text>
+            <type>インスタント</type>
+            <flavor>「是非にと言うなら試すがいい。」</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=572376&amp;type=card</imageUrl>
+            <language>Japanese</language>
+            <identifiers>
+                <scryfallId>1d902ecc-a1c5-4ef0-8e28-1d016392d245</scryfallId>
+                <multiverseId>572376</multiverseId>
+            </identifiers>
+            <multiverseid>572376</multiverseid>
+            <name>否认之力</name>
+            <text>如果当前不是你的回合，则你可以从你手上放逐一张蓝色牌，而不支付此咒语的法术力费用。
+反击目标非生物咒语。如果以此法反击该咒语，则改为将它放逐，而非置入其拥有者的坟墓场。</text>
+            <type>瞬间</type>
+            <flavor>「想试试看就来呀。」</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=572707&amp;type=card</imageUrl>
+            <language>Chinese Simplified</language>
+            <identifiers>
+                <scryfallId>0e78883e-f78d-42e8-9aa0-61a8570147ee</scryfallId>
+                <multiverseId>572707</multiverseId>
+            </identifiers>
+            <multiverseid>572707</multiverseid>
+        </foreignNames>
+        <printings>
+            <value>2X2</value>
+            <value>H1R</value>
+            <value>MH1</value>
+            <value>PRM</value>
+        </printings>
+        <originalText>If it's not your turn, you may exile a blue card from your hand rather than pay this spell's mana cost.
+Counter target noncreature spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.</originalText>
+        <originalType>Instant</originalType>
+        <legalities>
+            <format>Commander</format>
+            <legality>Legal</legality>
+            <format>Duel</format>
+            <legality>Legal</legality>
+            <format>Legacy</format>
+            <legality>Legal</legality>
+            <format>Modern</format>
+            <legality>Legal</legality>
+            <format>Oathbreaker</format>
+            <legality>Legal</legality>
+            <format>Vintage</format>
+            <legality>Legal</legality>
+        </legalities>
+        <id>03e8a3a3-b9c7-5aed-ab0d-7ea7fc9c8ad8</id>
+        <name>Force of Negation</name>
+        <manaCost>{1}{U}{U}</manaCost>
+        <cmc>3.0</cmc>
+        <colors>
+            <value>U</value>
+        </colors>
+        <colorIdentity>
+            <value>U</value>
+        </colorIdentity>
+        <type>Instant</type>
+        <types>
+            <value>Instant</value>
+        </types>
+        <rarity>Rare</rarity>
+        <set>2X2</set>
+        <setName>Double Masters 2022</setName>
+        <text>If it's not your turn, you may exile a blue card from your hand rather than pay this spell's mana cost.
+Counter target noncreature spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.</text>
+        <flavor>Not even the most scathing critics can break her concentration.</flavor>
+        <artist>Greg Hildebrandt</artist>
+        <number>346</number>
+        <layout>normal</layout>
+        <multiverseid>573008</multiverseid>
+        <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=573008&amp;type=card</imageUrl>
+        <variations>
+            <value>03e8a3a3-b9c7-5aed-ab0d-7ea7fc9c8ad8</value>
+            <value>3ccbf5e8-fc80-5256-956b-6da4542397ee</value>
+        </variations>
+        <foreignNames>
+            <name>Negierungskraft</name>
+            <text>Falls es nicht dein Zug ist, kannst du eine blaue Karte aus deiner Hand ins Exil schicken, anstatt die Manakosten dieses Zauberspruchs zu bezahlen.
+Neutralisiere einen Nichtkreatur-Zauberspruch deiner Wahl. Falls der Zauberspruch auf diese Weise neutralisiert wird, schicke ihn ins Exil, anstatt ihn auf den Friedhof seines Besitzers zu legen.</text>
+            <type>Spontanzauber</type>
+            <flavor>Nicht einmal die schärfsten Kritiker können ihre Konzentration stören.</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=573083&amp;type=card</imageUrl>
+            <language>German</language>
+            <identifiers>
+                <scryfallId>6e0dfd87-2375-4cef-8f9c-bd5ba3399488</scryfallId>
+                <multiverseId>573083</multiverseId>
+            </identifiers>
+            <multiverseid>573083</multiverseid>
+            <name>Force de négation</name>
+            <text>Si ce n'est pas votre tour, vous pouvez exiler une carte bleue de votre main à la place de payer le coût de mana de ce sort.
+Contrecarrez un sort non-créature ciblé. Si ce sort est contrecarré de cette manière, exilez-le à la place de le mettre dans le cimetière de son propriétaire.</text>
+            <type>Éphémère</type>
+            <flavor>Même les critiques les plus cinglants ne peuvent pas briser sa concentration.</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=573158&amp;type=card</imageUrl>
+            <language>French</language>
+            <identifiers>
+                <scryfallId>696d606c-d72f-4429-b3ba-cdd5452bedd4</scryfallId>
+                <multiverseId>573158</multiverseId>
+            </identifiers>
+            <multiverseid>573158</multiverseid>
+            <name>否定の力</name>
+            <text>あなたのターンでないなら、あなたはこの呪文のマナ・コストを支払うのではなく、あなたの手札にある青のカード１枚を追放してもよい。
+クリーチャーでない呪文１つを対象とする。それを打ち消す。これによりその呪文が打ち消されたなら、それをオーナーの墓地に置く代わりに追放する。</text>
+            <type>インスタント</type>
+            <flavor>毒舌の評論家ですら彼女の集中を切らすことができなかった。</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=573233&amp;type=card</imageUrl>
+            <language>Japanese</language>
+            <identifiers>
+                <scryfallId>b254ede1-7a5c-4ac8-8ab1-656391fcc09e</scryfallId>
+                <multiverseId>573233</multiverseId>
+            </identifiers>
+            <multiverseid>573233</multiverseid>
+            <name>否认之力</name>
+            <text>如果当前不是你的回合，则你可以从你手上放逐一张蓝色牌，而不支付此咒语的法术力费用。
+反击目标非生物咒语。如果以此法反击该咒语，则改为将它放逐，而非置入其拥有者的坟墓场。</text>
+            <type>瞬间</type>
+            <flavor>最毒舌的批评者也无法打破她的专注。</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=573308&amp;type=card</imageUrl>
+            <language>Chinese Simplified</language>
+            <identifiers>
+                <scryfallId>f8f7c5f8-bfc3-4dee-a7e1-5b37574c10d2</scryfallId>
+                <multiverseId>573308</multiverseId>
+            </identifiers>
+            <multiverseid>573308</multiverseid>
+        </foreignNames>
+        <printings>
+            <value>2X2</value>
+            <value>H1R</value>
+            <value>MH1</value>
+            <value>PRM</value>
+        </printings>
+        <originalText>If it's not your turn, you may exile a blue card from your hand rather than pay this spell's mana cost.
+Counter target noncreature spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.</originalText>
+        <originalType>Instant</originalType>
+        <legalities>
+            <format>Commander</format>
+            <legality>Legal</legality>
+            <format>Duel</format>
+            <legality>Legal</legality>
+            <format>Legacy</format>
+            <legality>Legal</legality>
+            <format>Modern</format>
+            <legality>Legal</legality>
+            <format>Oathbreaker</format>
+            <legality>Legal</legality>
+            <format>Vintage</format>
+            <legality>Legal</legality>
+        </legalities>
+        <id>e6f88c32-1836-5add-8995-9b18d6f7b34b</id>
+        <name>Force of Negation</name>
+        <manaCost>{1}{U}{U}</manaCost>
+        <cmc>3.0</cmc>
+        <colors>
+            <value>U</value>
+        </colors>
+        <colorIdentity>
+            <value>U</value>
+        </colorIdentity>
+        <type>Instant</type>
+        <types>
+            <value>Instant</value>
+        </types>
+        <rarity>Rare</rarity>
+        <set>2X2</set>
+        <setName>Double Masters 2022</setName>
+        <text>If it's not your turn, you may exile a blue card from your hand rather than pay this spell's mana cost.
+Counter target noncreature spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.</text>
+        <flavor>"Try, if you must."</flavor>
+        <artist>Paul Scott Canavan</artist>
+        <number>429</number>
+        <layout>normal</layout>
+        <multiverseid>573397</multiverseid>
+        <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=573397&amp;type=card</imageUrl>
+        <variations>
+            <value>03e8a3a3-b9c7-5aed-ab0d-7ea7fc9c8ad8</value>
+            <value>e6f88c32-1836-5add-8995-9b18d6f7b34b</value>
+        </variations>
+        <foreignNames>
+            <name>Negierungskraft</name>
+            <text>Falls es nicht dein Zug ist, kannst du eine blaue Karte aus deiner Hand ins Exil schicken, anstatt die Manakosten dieses Zauberspruchs zu bezahlen.
+Neutralisiere einen Nichtkreatur-Zauberspruch deiner Wahl. Falls der Zauberspruch auf diese Weise neutralisiert wird, schicke ihn ins Exil, anstatt ihn auf den Friedhof seines Besitzers zu legen.</text>
+            <type>Spontanzauber</type>
+            <flavor>„Versuche es, wenn du unbedingt musst."</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=573557&amp;type=card</imageUrl>
+            <language>German</language>
+            <identifiers>
+                <scryfallId>e0dc8b89-73c8-4ffa-ad30-4efc31f6687c</scryfallId>
+                <multiverseId>573557</multiverseId>
+            </identifiers>
+            <multiverseid>573557</multiverseid>
+            <name>Force de négation</name>
+            <text>Si ce n'est pas votre tour, vous pouvez exiler une carte bleue de votre main à la place de payer le coût de mana de ce sort.
+Contrecarrez un sort non-créature ciblé. Si ce sort est contrecarré de cette manière, exilez-le à la place de le mettre dans le cimetière de son propriétaire.</text>
+            <type>Éphémère</type>
+            <flavor>« Essayez, si vous insistez. »</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=573717&amp;type=card</imageUrl>
+            <language>French</language>
+            <identifiers>
+                <scryfallId>ce717ff3-6c4c-469b-af7d-2dbe053dd448</scryfallId>
+                <multiverseId>573717</multiverseId>
+            </identifiers>
+            <multiverseid>573717</multiverseid>
+            <name>否定の力</name>
+            <text>あなたのターンでないなら、あなたはこの呪文のマナ・コストを支払うのではなく、あなたの手札にある青のカード１枚を追放してもよい。
+クリーチャーでない呪文１つを対象とする。それを打ち消す。これによりその呪文が打ち消されたなら、それをオーナーの墓地に置く代わりに追放する。</text>
+            <type>インスタント</type>
+            <flavor>「是非にと言うなら試すがいい。」</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=573877&amp;type=card</imageUrl>
+            <language>Japanese</language>
+            <identifiers>
+                <scryfallId>cf08667f-87c8-4867-8b20-9ca09e297ccb</scryfallId>
+                <multiverseId>573877</multiverseId>
+            </identifiers>
+            <multiverseid>573877</multiverseid>
+            <name>否认之力</name>
+            <text>如果当前不是你的回合，则你可以从你手上放逐一张蓝色牌，而不支付此咒语的法术力费用。
+反击目标非生物咒语。如果以此法反击该咒语，则改为将它放逐，而非置入其拥有者的坟墓场。</text>
+            <type>瞬间</type>
+            <flavor>「想试试看就来呀。」</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=574037&amp;type=card</imageUrl>
+            <language>Chinese Simplified</language>
+            <identifiers>
+                <scryfallId>2b05a3fc-d9e4-4544-8d8d-db67cd332963</scryfallId>
+                <multiverseId>574037</multiverseId>
+            </identifiers>
+            <multiverseid>574037</multiverseid>
+        </foreignNames>
+        <printings>
+            <value>2X2</value>
+            <value>H1R</value>
+            <value>MH1</value>
+            <value>PRM</value>
+        </printings>
+        <originalText>If it's not your turn, you may exile a blue card from your hand rather than pay this spell's mana cost.
+Counter target noncreature spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.</originalText>
+        <originalType>Instant</originalType>
+        <legalities>
+            <format>Commander</format>
+            <legality>Legal</legality>
+            <format>Duel</format>
+            <legality>Legal</legality>
+            <format>Legacy</format>
+            <legality>Legal</legality>
+            <format>Modern</format>
+            <legality>Legal</legality>
+            <format>Oathbreaker</format>
+            <legality>Legal</legality>
+            <format>Vintage</format>
+            <legality>Legal</legality>
+        </legalities>
+        <id>3ccbf5e8-fc80-5256-956b-6da4542397ee</id>
+        <name>Force of Negation</name>
+        <manaCost>{1}{U}{U}</manaCost>
+        <cmc>3.0</cmc>
+        <colors>
+            <value>U</value>
+        </colors>
+        <colorIdentity>
+            <value>U</value>
+        </colorIdentity>
+        <type>Instant</type>
+        <types>
+            <value>Instant</value>
+        </types>
+        <rarity>Rare</rarity>
+        <set>H1R</set>
+        <setName>Modern Horizons 1 Timeshifts</setName>
+        <text>If it's not your turn, you may exile a blue card from your hand rather than pay this spell's mana cost.
+Counter target noncreature spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.</text>
+        <artist>Paul Scott Canavan</artist>
+        <number>9</number>
+        <layout>normal</layout>
+        <watermark>wotc</watermark>
+        <printings>
+            <value>2X2</value>
+            <value>H1R</value>
+            <value>MH1</value>
+            <value>PRM</value>
+        </printings>
+        <legalities>
+            <format>Commander</format>
+            <legality>Legal</legality>
+            <format>Duel</format>
+            <legality>Legal</legality>
+            <format>Legacy</format>
+            <legality>Legal</legality>
+            <format>Modern</format>
+            <legality>Legal</legality>
+            <format>Oathbreaker</format>
+            <legality>Legal</legality>
+            <format>Vintage</format>
+            <legality>Legal</legality>
+        </legalities>
+        <id>3353f32a-1938-5e04-b9ba-f31da9b5924d</id>
+        <name>Force of Negation</name>
+        <manaCost>{1}{U}{U}</manaCost>
+        <cmc>3.0</cmc>
+        <colors>
+            <value>U</value>
+        </colors>
+        <colorIdentity>
+            <value>U</value>
+        </colorIdentity>
+        <type>Instant</type>
+        <types>
+            <value>Instant</value>
+        </types>
+        <rarity>Rare</rarity>
+        <set>MH1</set>
+        <setName>Modern Horizons</setName>
+        <text>If it's not your turn, you may exile a blue card from your hand rather than pay this spell's mana cost.
+Counter target noncreature spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.</text>
+        <flavor>"Try, if you must."</flavor>
+        <artist>Paul Scott Canavan</artist>
+        <number>52</number>
+        <layout>normal</layout>
+        <multiverseid>464001</multiverseid>
+        <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=464001&amp;type=card</imageUrl>
+        <foreignNames>
+            <name>Negierungskraft</name>
+            <text>Falls es nicht dein Zug ist, kannst du eine blaue Karte aus deiner Hand ins Exil schicken, anstatt die Manakosten dieses Zauberspruchs zu bezahlen.
+Neutralisiere einen Nichtkreatur-Zauberspruch deiner Wahl. Falls der Zauberspruch auf diese Weise neutralisiert wird, schicke ihn ins Exil, anstatt ihn auf den Friedhof seines Besitzers zu legen.</text>
+            <type>Spontanzauber</type>
+            <flavor>„Versuche es, wenn du unbedingt musst."</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=464255&amp;type=card</imageUrl>
+            <language>German</language>
+            <identifiers>
+                <scryfallId>3917699c-3136-4479-baf5-f5a9856f13e1</scryfallId>
+                <multiverseId>464255</multiverseId>
+            </identifiers>
+            <multiverseid>464255</multiverseid>
+            <name>Fuerza de la negación</name>
+            <text>Si no es tu turno, puedes exiliar una carta azul de tu mano en vez de pagar el coste de maná de este hechizo.
+Contrarresta el hechizo objetivo que no sea de criatura. Si ese hechizo es contrarrestado de esta manera, exílialo en vez de ponerlo en el cementerio de su propietario.</text>
+            <type>Instantáneo</type>
+            <flavor>"Inténtalo si tanto lo deseas".</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=464509&amp;type=card</imageUrl>
+            <language>Spanish</language>
+            <identifiers>
+                <scryfallId>86efe961-0a96-4634-8f94-576035bb01eb</scryfallId>
+                <multiverseId>464509</multiverseId>
+            </identifiers>
+            <multiverseid>464509</multiverseid>
+            <name>Force de négation</name>
+            <text>Si ce n'est pas votre tour, vous pouvez exiler une carte bleue de votre main à la place de payer le coût de mana de ce sort.
+Contrecarrez le sort non-créature ciblé. Si ce sort est contrecarré de cette manière, exilez-le à la place de le mettre dans le cimetière de son propriétaire.</text>
+            <type>Éphémère</type>
+            <flavor>« Essayez, si vous insistez. »</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=464763&amp;type=card</imageUrl>
+            <language>French</language>
+            <identifiers>
+                <scryfallId>c9695c16-0a04-435b-a545-a1ee6cee49c6</scryfallId>
+                <multiverseId>464763</multiverseId>
+            </identifiers>
+            <multiverseid>464763</multiverseid>
+            <name>Forza della Negazione</name>
+            <text>Se non è il tuo turno, puoi esiliare una carta blu dalla tua mano invece di pagare il costo di mana di questa magia.
+Neutralizza una magia non creatura bersaglio. Se quella magia è neutralizzata in questo modo, esiliala invece di metterla nel cimitero del suo proprietario.</text>
+            <type>Istantaneo</type>
+            <flavor>"Provaci, se proprio devi."</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=465017&amp;type=card</imageUrl>
+            <language>Italian</language>
+            <identifiers>
+                <scryfallId>7f780187-531c-4a06-9525-0c579c109655</scryfallId>
+                <multiverseId>465017</multiverseId>
+            </identifiers>
+            <multiverseid>465017</multiverseid>
+            <name>否定の力</name>
+            <text>あなたのターンでないなら、あなたはこの呪文のマナ・コストを支払うのではなく、あなたの手札から青のカード１枚を追放してもよい。
+クリーチャーでない呪文１つを対象とし、それを打ち消す。これによりその呪文が打ち消されたなら、それをオーナーの墓地に置く代わりに追放する。</text>
+            <type>インスタント</type>
+            <flavor>「是非にと言うなら試すがいい。」</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=465271&amp;type=card</imageUrl>
+            <language>Japanese</language>
+            <identifiers>
+                <scryfallId>64263968-0ebb-4cb7-8e4d-2c397b591457</scryfallId>
+                <multiverseId>465271</multiverseId>
+            </identifiers>
+            <multiverseid>465271</multiverseid>
+            <name>부정의 힘</name>
+            <text>당신의 턴이 아니라면, 당신은 이 주문의 마나 비용을 지불하는 대신 당신의 손에서 청색 카드 한 장을 추방할 수 있다.
+생물이 아닌 주문을 목표로 정한다. 그 주문을 무효화한다. 그 주문이 이런 식으로 무효화되면, 그 주문을 소유자의 무덤에 넣는 대신 추방한다.</text>
+            <type>순간마법</type>
+            <flavor>"해 봐, 꼭 해야겠다면."</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=465525&amp;type=card</imageUrl>
+            <language>Korean</language>
+            <identifiers>
+                <scryfallId>8d3dcec2-3162-43cc-96dd-2a90c315189f</scryfallId>
+                <multiverseId>465525</multiverseId>
+            </identifiers>
+            <multiverseid>465525</multiverseid>
+            <name>Força da Negação</name>
+            <text>Se não for o seu turno, você pode exilar um card azul de sua mão em vez de pagar o custo de mana desta mágica.
+Anule a mágica alvo que não seja de criatura. Se aquela mágica for anulada dessa maneira, exile-a em vez de colocá-la no cemitério de seu dono.</text>
+            <type>Mágica Instantânea</type>
+            <flavor>"Você pode até tentar."</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=465779&amp;type=card</imageUrl>
+            <language>Portuguese (Brazil)</language>
+            <identifiers>
+                <scryfallId>91ed852f-d7ac-4735-bfa0-be909cc4b3b1</scryfallId>
+                <multiverseId>465779</multiverseId>
+            </identifiers>
+            <multiverseid>465779</multiverseid>
+            <name>Сила Отрицания</name>
+            <text>Если это не ваш ход, вы можете изгнать синюю карту из вашей руки вместо уплаты мана-стоимости этого заклинания.
+Отмените целевое заклинание, не являющееся заклинанием существа. Если то заклинание отменяется таким образом, изгоните его вместо того, чтобы положить его на кладбище его владельца.</text>
+            <type>Мгновенное заклинание</type>
+            <flavor>«Что ж, попробуй, если тебе так угодно».</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=466033&amp;type=card</imageUrl>
+            <language>Russian</language>
+            <identifiers>
+                <scryfallId>001e3b4e-2726-49c4-8e53-ae7e29f49c31</scryfallId>
+                <multiverseId>466033</multiverseId>
+            </identifiers>
+            <multiverseid>466033</multiverseid>
+            <name>否认之力</name>
+            <text>如果当前不是你的回合，则你可以从你手上放逐一张蓝色牌，而不支付此咒语的法术力费用。
+反击目标非生物咒语。如果以此法反击该咒语，则改为将它放逐，而非置入其拥有者的坟墓场。</text>
+            <type>瞬间</type>
+            <flavor>「想试试看就来呀。」</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=466287&amp;type=card</imageUrl>
+            <language>Chinese Simplified</language>
+            <identifiers>
+                <scryfallId>40c88b18-ed78-4f03-a946-bfc7a4ee9024</scryfallId>
+                <multiverseId>466287</multiverseId>
+            </identifiers>
+            <multiverseid>466287</multiverseid>
+            <name>否認之力</name>
+            <text>如果當前不是你的回合，則你可以從你手上放逐一張藍色牌，而不支付此咒語的魔法力費用。
+反擊目標非生物咒語。如果以此法反擊該咒語，則改為將它放逐，而非置入其擁有者的墳墓場。</text>
+            <type>瞬間</type>
+            <flavor>「想試試看就來呀。」</flavor>
+            <imageUrl>http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=466541&amp;type=card</imageUrl>
+            <language>Chinese Traditional</language>
+            <identifiers>
+                <scryfallId>a75f43db-2fdb-4732-927d-6c887155b172</scryfallId>
+                <multiverseId>466541</multiverseId>
+            </identifiers>
+            <multiverseid>466541</multiverseid>
+        </foreignNames>
+        <printings>
+            <value>2X2</value>
+            <value>H1R</value>
+            <value>MH1</value>
+            <value>PRM</value>
+        </printings>
+        <originalText>If it's not your turn, you may exile a blue card from your hand rather than pay this spell's mana cost.
+Counter target noncreature spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.</originalText>
+        <originalType>Instant</originalType>
+        <legalities>
+            <format>Commander</format>
+            <legality>Legal</legality>
+            <format>Duel</format>
+            <legality>Legal</legality>
+            <format>Legacy</format>
+            <legality>Legal</legality>
+            <format>Modern</format>
+            <legality>Legal</legality>
+            <format>Oathbreaker</format>
+            <legality>Legal</legality>
+            <format>Vintage</format>
+            <legality>Legal</legality>
+        </legalities>
+        <id>9e4849c5-fd8e-523b-829d-6445471867e2</id>
+        <name>Force of Negation</name>
+        <manaCost>{1}{U}{U}</manaCost>
+        <cmc>3.0</cmc>
+        <colors>
+            <value>U</value>
+        </colors>
+        <colorIdentity>
+            <value>U</value>
+        </colorIdentity>
+        <type>Instant</type>
+        <types>
+            <value>Instant</value>
+        </types>
+        <rarity>Rare</rarity>
+        <set>PRM</set>
+        <setName>Magic Online Promos</setName>
+        <text>If it's not your turn, you may exile a blue card from your hand rather than pay this spell's mana cost.
+Counter target noncreature spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.</text>
+        <flavor>"Try, if you must."</flavor>
+        <artist>Paul Scott Canavan</artist>
+        <number>91237</number>
+        <layout>normal</layout>
+        <variations>
+            <value>84720e9f-9a01-560f-a47a-dcd509b5a5da</value>
+        </variations>
+        <printings>
+            <value>2X2</value>
+            <value>H1R</value>
+            <value>MH1</value>
+            <value>PRM</value>
+        </printings>
+        <legalities>
+            <format>Commander</format>
+            <legality>Legal</legality>
+            <format>Duel</format>
+            <legality>Legal</legality>
+            <format>Legacy</format>
+            <legality>Legal</legality>
+            <format>Modern</format>
+            <legality>Legal</legality>
+            <format>Oathbreaker</format>
+            <legality>Legal</legality>
+            <format>Vintage</format>
+            <legality>Legal</legality>
+        </legalities>
+        <id>11aef8a0-9048-51d7-a386-065efa1bc287</id>
+        <name>Force of Negation</name>
+        <manaCost>{1}{U}{U}</manaCost>
+        <cmc>3.0</cmc>
+        <colors>
+            <value>U</value>
+        </colors>
+        <colorIdentity>
+            <value>U</value>
+        </colorIdentity>
+        <type>Instant</type>
+        <types>
+            <value>Instant</value>
+        </types>
+        <rarity>Rare</rarity>
+        <set>PRM</set>
+        <setName>Magic Online Promos</setName>
+        <text>If it's not your turn, you may exile a blue card from your hand rather than pay this spell's mana cost.
+Counter target noncreature spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.</text>
+        <flavor>Not even the most scathing critics can break her concentration.</flavor>
+        <artist>Greg Hildebrandt</artist>
+        <number>102237</number>
+        <layout>normal</layout>
+        <variations>
+            <value>11aef8a0-9048-51d7-a386-065efa1bc287</value>
+        </variations>
+        <printings>
+            <value>2X2</value>
+            <value>H1R</value>
+            <value>MH1</value>
+            <value>PRM</value>
+        </printings>
+        <legalities>
+            <format>Commander</format>
+            <legality>Legal</legality>
+            <format>Duel</format>
+            <legality>Legal</legality>
+            <format>Legacy</format>
+            <legality>Legal</legality>
+            <format>Modern</format>
+            <legality>Legal</legality>
+            <format>Oathbreaker</format>
+            <legality>Legal</legality>
+            <format>Vintage</format>
+            <legality>Legal</legality>
+        </legalities>
+        <id>84720e9f-9a01-560f-a47a-dcd509b5a5da</id>
+    </cards>
+</selectedCard>
