@@ -3,6 +3,7 @@ package edu.badpals.magictg.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.badpals.magictg.model.Cards;
 import edu.badpals.magictg.model.Response;
+import edu.badpals.magictg.services.CacheManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -62,16 +63,43 @@ public class MainWindowController implements Initializable {
     @FXML
     private Button returnToLogIn;
 
+    private Map<String, Object> cache;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        // Cargar la caché al iniciar
+        cache = CacheManager.cargarCache();  // Inicializamos la caché
     }
+
     @FXML
     public void setNameCard(ActionEvent event) {
         try {
-            apiData = fetchApiData();
             String nameInput = URLEncoder.encode(search.getText(), StandardCharsets.UTF_8);
 
+            // Verificar si la búsqueda ya está en la caché
+            if (cache.containsKey(nameInput)) {
+                System.out.println("Datos obtenidos desde la caché.");
+
+                // Obtener el objeto de la caché
+                Object cachedData = cache.get(nameInput);
+
+                // Verificar si los datos son un LinkedHashMap (esto sucede cuando se deserializa desde la caché)
+                Response response;
+                if (cachedData instanceof LinkedHashMap) {
+                    // Convertir el LinkedHashMap en un objeto Response usando ObjectMapper
+                    ObjectMapper objectMapper = new ObjectMapper();
+                    response = objectMapper.convertValue(cachedData, Response.class);
+                } else {
+                    // Si no es un LinkedHashMap, castearlo a Response
+                    response = (Response) cachedData;
+                }
+
+                // Mostrar los datos
+                mostrarDatos(response);
+                return;
+            }
+
+            // Si no está en la caché, hacemos la solicitud a la API
             URL jsonURL = new URL(CHARACTER_URL + nameInput);
             HttpURLConnection connection = (HttpURLConnection) jsonURL.openConnection();
             connection.setRequestMethod("GET");
@@ -79,46 +107,56 @@ public class MainWindowController implements Initializable {
             ObjectMapper objectMapper = new ObjectMapper();
             Response response = objectMapper.readValue(connection.getInputStream(), Response.class);
 
-            // Filtrar cartas que tienen imagen
-            List<Cards> cardsWithImage = response.getCards().stream()
-                    .filter(card -> card.getImageUrl() != null && !card.getImageUrl().isEmpty())
-                    .toList();
+            // Guardar los datos en la caché
+            cache.put(nameInput, response);
+            CacheManager.guardarCache(cache);
 
-            // Verifica si hay cartas disponibles con imagen
-            if (!cardsWithImage.isEmpty()) {
-                Cards card = cardsWithImage.get(0); // Usar la primera carta que tiene imagen
-
-                // Actualizamos los valores de los campos
-                manaCost.setText(formatManaCost(card.getManaCost()));
-                colors.setText(formatColors(card.getColors()));
-                type.setText(String.valueOf(card.getType()));
-
-                // Verifica si el poder es nulo
-                power.setText(card.getPower() != null ? String.valueOf(card.getPower()) : "esta carta no tiene valor de ataque");
-
-                // Verifica si la resistencia es nula
-                toughness.setText(card.getToughness() != null ? String.valueOf(card.getToughness()) : "esta carta no tiene valor de resistencia");
-
-                // Aquí obtienes la URL de la imagen desde la API o el objeto `Cards`
-                String imageUrl = card.getImageUrl();
-
-                // Verifica si la URL usa http, y cámbiala a https
-                if (imageUrl.startsWith("http://")) {
-                    imageUrl = imageUrl.replace("http://", "https://");
-                }
-
-                // Carga la imagen en el ImageView
-                Image image = new Image(imageUrl);
-                cardView.setImage(image);
-            } else {
-                // Manejo del caso en que no haya cartas con imagen
-                System.out.println("No hay cartas con imagen disponible.");
-            }
+            mostrarDatos(response);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+
+    private void mostrarDatos(Response response) {
+        // Filtrar cartas que tienen imagen
+        List<Cards> cardsWithImage = response.getCards().stream()
+                .filter(card -> card.getImageUrl() != null && !card.getImageUrl().isEmpty())
+                .toList();
+
+        // Verifica si hay cartas disponibles con imagen
+        if (!cardsWithImage.isEmpty()) {
+            Cards card = cardsWithImage.get(0); // Usar la primera carta que tiene imagen
+
+            // Actualizamos los valores de los campos
+            manaCost.setText(formatManaCost(card.getManaCost()));
+            colors.setText(formatColors(card.getColors()));
+            type.setText(String.valueOf(card.getType()));
+
+            // Verifica si el poder es nulo
+            power.setText(card.getPower() != null ? String.valueOf(card.getPower()) : "Esta carta no tiene valor de ataque");
+
+            // Verifica si la resistencia es nula
+            toughness.setText(card.getToughness() != null ? String.valueOf(card.getToughness()) : "Esta carta no tiene valor de resistencia");
+
+            // Aquí obtienes la URL de la imagen desde la API o el objeto `Cards`
+            String imageUrl = card.getImageUrl();
+
+            // Verifica si la URL usa http, y cámbiala a https
+            if (imageUrl.startsWith("http://")) {
+                imageUrl = imageUrl.replace("http://", "https://");
+            }
+
+            // Carga la imagen en el ImageView
+            Image image = new Image(imageUrl);
+            cardView.setImage(image);
+        } else {
+            // Manejo del caso en que no haya cartas con imagen
+            System.out.println("No hay cartas con imagen disponible.");
+        }
+    }
+
 
 
     // Método para formatear el costo de maná
@@ -250,6 +288,86 @@ public class MainWindowController implements Initializable {
                         formattedMana.append(totalCount).append(" Phyrexian Green");
                         isFirstColor = false;
                         break;
+
+                    case "B/R":
+                        if (!isFirstColor || hasAddedColorless) {
+                            formattedMana.append(", ");
+                        }
+                        formattedMana.append(totalCount).append(" Black/Red");
+                        isFirstColor = false;
+                        break;
+
+                    case "B/G":
+                        if (!isFirstColor || hasAddedColorless) {
+                            formattedMana.append(", ");
+                        }
+                        formattedMana.append(totalCount).append(" Black/Green");
+                        isFirstColor = false;
+                        break;
+
+                    case "G/U":
+                        if (!isFirstColor || hasAddedColorless) {
+                            formattedMana.append(", ");
+                        }
+                        formattedMana.append(totalCount).append(" Green/Blue");
+                        isFirstColor = false;
+                        break;
+
+                    case "G/W":
+                        if (!isFirstColor || hasAddedColorless) {
+                            formattedMana.append(", ");
+                        }
+                        formattedMana.append(totalCount).append(" Green/White");
+                        isFirstColor = false;
+                        break;
+
+                    case "R/W":
+                        if (!isFirstColor || hasAddedColorless) {
+                            formattedMana.append(", ");
+                        }
+                        formattedMana.append(totalCount).append(" Red/White");
+                        isFirstColor = false;
+                        break;
+
+                    case "R/G":
+                        if (!isFirstColor || hasAddedColorless) {
+                            formattedMana.append(", ");
+                        }
+                        formattedMana.append(totalCount).append(" Red/Green");
+                        isFirstColor = false;
+                        break;
+
+                    case "U/B":
+                        if (!isFirstColor || hasAddedColorless) {
+                            formattedMana.append(", ");
+                        }
+                        formattedMana.append(totalCount).append(" Blue/Black");
+                        isFirstColor = false;
+                        break;
+
+                    case "U/R":
+                        if (!isFirstColor || hasAddedColorless) {
+                            formattedMana.append(", ");
+                        }
+                        formattedMana.append(totalCount).append(" Blue/Red");
+                        isFirstColor = false;
+                        break;
+
+                    case "W/B":
+                        if (!isFirstColor || hasAddedColorless) {
+                            formattedMana.append(", ");
+                        }
+                        formattedMana.append(totalCount).append(" White/Black");
+                        isFirstColor = false;
+                        break;
+
+                    case "W/U":
+                        if (!isFirstColor || hasAddedColorless) {
+                            formattedMana.append(", ");
+                        }
+                        formattedMana.append(totalCount).append(" White/Blue");
+                        isFirstColor = false;
+                        break;
                 }
             }
             return formattedMana.toString();
@@ -348,5 +466,7 @@ public class MainWindowController implements Initializable {
 
         return result.toString();  // Retornar el JSON recibido
     }
-
 }
+
+
+
