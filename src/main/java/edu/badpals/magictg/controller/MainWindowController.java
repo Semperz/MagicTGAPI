@@ -104,7 +104,7 @@ public class MainWindowController implements Initializable {
             Response response = new ObjectMapper().convertValue(ultimaBusqueda.get("response"), Response.class);
 
             // Mostrar los datos de la última búsqueda
-            mostrarDatos(response);
+            mostrarDatos(response, nombreUsuario);
 
             // Obtener el nombre de la primera carta de la respuesta
             if (response.getCards() != null && !response.getCards().isEmpty()) {
@@ -139,8 +139,9 @@ public class MainWindowController implements Initializable {
                 } else {
                     response = (Response) cachedData;
                 }
-                saveLastSearch.guardarUltimaBusqueda(LoginController.currentUser, nameInput, response);
-                mostrarDatos(response);
+
+                mostrarDatos(response, nameInput);
+
                 return;
             }
 
@@ -152,21 +153,21 @@ public class MainWindowController implements Initializable {
             ObjectMapper objectMapper = new ObjectMapper();
             Response response = objectMapper.readValue(connection.getInputStream(), Response.class);
 
-            // Guardar la última búsqueda del usuario actual
-            saveLastSearch.guardarUltimaBusqueda(LoginController.currentUser, nameInput, response);
+
 
             // Guardar los datos en la caché
             cache.put(nameInput, response);
             CacheManager.guardarCache(cache);
 
-            mostrarDatos(response);
+
+            mostrarDatos(response, nameInput); ;
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private void mostrarDatos(Response response) {
+    private void mostrarDatos(Response response, String nameInput) {
         // Filtrar cartas que tienen imagen
         List<Cards> cardsWithImage = response.getCards().stream()
                 .filter(card -> card.getImageUrl() != null && !card.getImageUrl().isEmpty())
@@ -198,6 +199,7 @@ public class MainWindowController implements Initializable {
             // Carga la imagen en el ImageView
             Image image = new Image(imageUrl);
             cardView.setImage(image);
+            saveLastSearch.guardarUltimaBusqueda(LoginController.currentUser, nameInput, response);
         } else {
             // Manejo del caso en que no haya cartas con imagen
             System.out.println("No hay cartas con imagen disponible.");
