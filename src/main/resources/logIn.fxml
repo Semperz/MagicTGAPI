@@ -15,7 +15,7 @@
             <Label layoutX="71.0" layoutY="127.0" text="ID:" />
             <Label layoutX="64.0" layoutY="158.0" text="Contaseña:" />
             <TextField fx:id="textID" layoutX="156.0" layoutY="123.0" promptText="Nombre de usuario" /> <!-- Aquí es donde se mostrará el texto con asteriscos -->
-            <Button fx:id="btnLogIn" layoutX="159.0" layoutY="221.0" mnemonicParsing="false" onAction="#tryToLogIN" text="Log IN" />
+            <Button fx:id="btnLogIn" layoutX="159.0" layoutY="221.0" mnemonicParsing="false" onAction="#tryToLogIN" text="Log In" />
             <Label layoutX="79.0" layoutY="36.0" text="Bienvenido">
                <font>
                   <Font size="43.0" />
