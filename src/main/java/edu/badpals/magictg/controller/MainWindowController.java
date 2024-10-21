@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.badpals.magictg.model.Cards;
 import edu.badpals.magictg.model.Response;
 import edu.badpals.magictg.services.CacheManager;
+import edu.badpals.magictg.services.saveLastSearch;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -65,10 +66,29 @@ public class MainWindowController implements Initializable {
 
     private Map<String, Object> cache;
 
+    public static String currentUser;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         // Cargar la caché al iniciar
         cache = CacheManager.cargarCache();  // Inicializamos la caché
+
+        // Cargar la última búsqueda para el usuario actual
+        Map<String, Object> ultimaBusqueda = saveLastSearch.cargarUltimaBusqueda(LoginController.currentUser);
+        if (ultimaBusqueda != null) {
+            // Extraer la respuesta de la búsqueda
+            Response response = new ObjectMapper().convertValue(ultimaBusqueda.get("response"), Response.class);
+
+            // Mostrar los datos de la última búsqueda
+            mostrarDatos(response);
+
+            // Obtener el nombre de la primera carta de la respuesta
+            if (response.getCards() != null && !response.getCards().isEmpty()) {
+                String nombreCarta = response.getCards().get(0).getName(); // Obtener el nombre de la primera carta
+                // Mostrar el nombre de la carta en lugar de la búsqueda
+                search.setText(nombreCarta); // Opcional: Si deseas mostrar el nombre en el campo de búsqueda
+            }
+        }
     }
 
     @FXML
@@ -80,26 +100,21 @@ public class MainWindowController implements Initializable {
             if (cache.containsKey(nameInput)) {
                 System.out.println("Datos obtenidos desde la caché.");
 
-                // Obtener el objeto de la caché
                 Object cachedData = cache.get(nameInput);
-
-                // Verificar si los datos son un LinkedHashMap (esto sucede cuando se deserializa desde la caché)
                 Response response;
+
                 if (cachedData instanceof LinkedHashMap) {
-                    // Convertir el LinkedHashMap en un objeto Response usando ObjectMapper
                     ObjectMapper objectMapper = new ObjectMapper();
                     response = objectMapper.convertValue(cachedData, Response.class);
                 } else {
-                    // Si no es un LinkedHashMap, castearlo a Response
                     response = (Response) cachedData;
                 }
-
-                // Mostrar los datos
+                saveLastSearch.guardarUltimaBusqueda(LoginController.currentUser, nameInput, response);
                 mostrarDatos(response);
                 return;
             }
 
-            // Si no está en la caché, hacemos la solicitud a la API
+            // Hacer la solicitud a la API
             URL jsonURL = new URL(CHARACTER_URL + nameInput);
             HttpURLConnection connection = (HttpURLConnection) jsonURL.openConnection();
             connection.setRequestMethod("GET");
@@ -107,9 +122,15 @@ public class MainWindowController implements Initializable {
             ObjectMapper objectMapper = new ObjectMapper();
             Response response = objectMapper.readValue(connection.getInputStream(), Response.class);
 
+
+            // Guardar la última búsqueda del usuario actual
+            saveLastSearch.guardarUltimaBusqueda(LoginController.currentUser, nameInput, response);
+
+
             // Guardar los datos en la caché
             cache.put(nameInput, response);
             CacheManager.guardarCache(cache);
+
 
             mostrarDatos(response);
 

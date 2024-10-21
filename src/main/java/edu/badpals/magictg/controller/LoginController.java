@@ -24,6 +24,8 @@ public class LoginController {
     @FXML
     private Button btnLogIn;
 
+    public static String currentUser; // Usuario actual
+
     // Ruta al archivo JSON
     private static final String USERS_FILE = "users.json";
 
@@ -32,7 +34,6 @@ public class LoginController {
         public String id;
         public String password;
 
-        // Getters y setters opcionales si los necesitas
         public String getId() {
             return id;
         }
@@ -58,8 +59,6 @@ public class LoginController {
         try {
             // Leer el archivo JSON desde el classpath
             ObjectMapper objectMapper = new ObjectMapper();
-
-            // Utilizar getResourceAsStream para cargar el archivo JSON
             List<User> users = objectMapper.readValue(
                     getClass().getResourceAsStream("/users.json"),
                     new TypeReference<List<User>>() {}
@@ -70,8 +69,8 @@ public class LoginController {
                     .anyMatch(user -> user.getId().equals(inputID) && user.getPassword().equals(inputPassword));
 
             if (loginSuccess) {
+                currentUser = inputID; // Asignar el nombre de usuario actual aquí
                 showAlert(Alert.AlertType.INFORMATION, "Login Exitoso", "Bienvenido, " + inputID + "!");
-                // Cargar la nueva ventana (mainView)
                 loadMainView();
             } else {
                 showAlert(Alert.AlertType.ERROR, "Login Fallido", "Usuario o contraseña incorrectos.");
@@ -112,5 +111,5 @@ public class LoginController {
             showAlert(Alert.AlertType.ERROR, "Error", "No se pudo cargar la vista principal.");
         }
     }
-
 }
+
