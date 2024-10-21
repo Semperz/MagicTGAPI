@@ -63,7 +63,7 @@ public class secondWindowController implements Initializable {
         }
     }
 
-    private void exportAlert(Alert.AlertType alertType, String title, String mesasge) {
+    static void exportAlert(Alert.AlertType alertType, String title, String mesasge) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);
         alert.setHeaderText(null);

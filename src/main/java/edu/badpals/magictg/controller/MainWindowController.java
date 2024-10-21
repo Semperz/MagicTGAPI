@@ -27,6 +27,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.stream.Collectors;
 
+
+import static edu.badpals.magictg.controller.secondWindowController.exportAlert;
+
 public class MainWindowController implements Initializable {
 
     @FXML
@@ -127,6 +130,10 @@ public class MainWindowController implements Initializable {
             apiData = fetchApiData();
             String nameInput = URLEncoder.encode(search.getText(), StandardCharsets.UTF_8);
 
+            nameInput = nameInput.toLowerCase();
+
+
+
             // Verificar si la búsqueda ya está en la caché
             if (cache.containsKey(nameInput)) {
                 System.out.println("Datos obtenidos desde la caché.");
@@ -203,7 +210,8 @@ public class MainWindowController implements Initializable {
             saveLastSearch.guardarUltimaBusqueda(LoginController.currentUser, nameInput, response);
         } else {
             // Manejo del caso en que no haya cartas con imagen
-            System.out.println("No hay cartas con imagen disponible.");
+            exportAlert(Alert.AlertType.ERROR, "Busqueda fallida", "No se ha encontrado ninguna carta disponible");
+            search.setText("");
         }
     }
 
