@@ -11,9 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
@@ -73,8 +71,34 @@ public class MainWindowController implements Initializable {
         // Cargar la caché al iniciar
         cache = CacheManager.cargarCache();  // Inicializamos la caché
 
-        // Cargar la última búsqueda para el usuario actual
-        Map<String, Object> ultimaBusqueda = saveLastSearch.cargarUltimaBusqueda(LoginController.currentUser);
+        // Preguntar si el usuario quiere cargar su última búsqueda
+        if (LoginController.currentUser != null) {
+            preguntarCargaUltimaBusqueda(LoginController.currentUser);
+        }
+    }
+
+    // Método para preguntar si cargar la última búsqueda
+    private void preguntarCargaUltimaBusqueda(String nombreUsuario) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Cargar última búsqueda");
+        alert.setHeaderText("¿Desea cargar su última búsqueda?");
+        alert.setContentText("Puede cargar su última búsqueda realizada o empezar desde cero.");
+
+        ButtonType buttonTypeSi = new ButtonType("Sí");
+        ButtonType buttonTypeNo = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+        alert.getButtonTypes().setAll(buttonTypeSi, buttonTypeNo);
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent() && result.get() == buttonTypeSi) {
+            // Si el usuario elige "Sí", cargamos la última búsqueda
+            cargarUltimaBusqueda(nombreUsuario);
+        }
+    }
+
+    // Método que carga la última búsqueda del usuario
+    private void cargarUltimaBusqueda(String nombreUsuario) {
+        Map<String, Object> ultimaBusqueda = saveLastSearch.cargarUltimaBusqueda(nombreUsuario);
         if (ultimaBusqueda != null) {
             // Extraer la respuesta de la búsqueda
             Response response = new ObjectMapper().convertValue(ultimaBusqueda.get("response"), Response.class);
@@ -84,10 +108,16 @@ public class MainWindowController implements Initializable {
 
             // Obtener el nombre de la primera carta de la respuesta
             if (response.getCards() != null && !response.getCards().isEmpty()) {
-                String nombreCarta = response.getCards().get(0).getName(); // Obtener el nombre de la primera carta
-                // Mostrar el nombre de la carta en lugar de la búsqueda
-                search.setText(nombreCarta); // Opcional: Si deseas mostrar el nombre en el campo de búsqueda
+                String nombreCarta = response.getCards().get(0).getName();
+                // Mostrar el nombre de la carta en el campo de búsqueda
+                search.setText(nombreCarta);
             }
+        } else {
+            Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+            alerta.setTitle("Sin última búsqueda");
+            alerta.setHeaderText(null);
+            alerta.setContentText("No se encontró una búsqueda guardada.");
+            alerta.showAndWait();
         }
     }
 
@@ -122,15 +152,12 @@ public class MainWindowController implements Initializable {
             ObjectMapper objectMapper = new ObjectMapper();
             Response response = objectMapper.readValue(connection.getInputStream(), Response.class);
 
-
             // Guardar la última búsqueda del usuario actual
             saveLastSearch.guardarUltimaBusqueda(LoginController.currentUser, nameInput, response);
-
 
             // Guardar los datos en la caché
             cache.put(nameInput, response);
             CacheManager.guardarCache(cache);
-
 
             mostrarDatos(response);
 
@@ -138,7 +165,6 @@ public class MainWindowController implements Initializable {
             e.printStackTrace();
         }
     }
-
 
     private void mostrarDatos(Response response) {
         // Filtrar cartas que tienen imagen
@@ -177,6 +203,8 @@ public class MainWindowController implements Initializable {
             System.out.println("No hay cartas con imagen disponible.");
         }
     }
+
+
 
 
 
