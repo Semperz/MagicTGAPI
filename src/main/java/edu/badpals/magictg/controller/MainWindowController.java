@@ -82,7 +82,7 @@ public class MainWindowController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Cargar última búsqueda");
         alert.setHeaderText("¿Desea cargar su última búsqueda?");
-        alert.setContentText("Puede cargar su última búsqueda realizada o hacer una búsqueda nueva.");
+        alert.setContentText("Carga tu última búsqueda o empieza una nueva.");
 
         ButtonType buttonTypeSi = new ButtonType("Sí");
         ButtonType buttonTypeNo = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
