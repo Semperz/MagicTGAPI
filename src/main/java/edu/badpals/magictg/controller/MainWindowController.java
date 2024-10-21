@@ -124,6 +124,7 @@ public class MainWindowController implements Initializable {
     @FXML
     public void setNameCard(ActionEvent event) {
         try {
+            apiData = fetchApiData();
             String nameInput = URLEncoder.encode(search.getText(), StandardCharsets.UTF_8);
 
             // Verificar si la búsqueda ya está en la caché
