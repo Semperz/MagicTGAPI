@@ -82,7 +82,7 @@ public class LoginController {
         }
     }
 
-    // Método para mostrar alertas
+    // Metodo para mostrar alertas
     private void showAlert(Alert.AlertType alertType, String title, String message) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);
@@ -91,7 +91,7 @@ public class LoginController {
         alert.showAndWait();
     }
 
-    // Método para cargar la nueva ventana
+    // Metodo para cargar la nueva ventana
     private void loadMainView() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/mainView.fxml"));

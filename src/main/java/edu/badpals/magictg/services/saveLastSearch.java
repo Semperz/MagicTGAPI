@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class saveLastSearch {
 
-    // Método para obtener la ruta del archivo según el nombre de usuario
+    // Metodo para obtener la ruta del archivo según el nombre de usuario
     private static String getFilePath(String nombreUsuario) {
         return "src/main/resources/ultima_busqueda_" + nombreUsuario + ".json"; // Ruta del archivo específica para el usuario
     }

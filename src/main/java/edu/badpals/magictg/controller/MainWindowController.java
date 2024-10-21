@@ -77,7 +77,7 @@ public class MainWindowController implements Initializable {
         }
     }
 
-    // Método para preguntar si cargar la última búsqueda
+    // Metodo para preguntar si cargar la última búsqueda
     private void preguntarCargaUltimaBusqueda(String nombreUsuario) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Cargar última búsqueda");
@@ -96,7 +96,7 @@ public class MainWindowController implements Initializable {
         }
     }
 
-    // Método que carga la última búsqueda del usuario
+    // Metodo que carga la última búsqueda del usuario
     private void cargarUltimaBusqueda(String nombreUsuario) {
         Map<String, Object> ultimaBusqueda = saveLastSearch.cargarUltimaBusqueda(nombreUsuario);
         if (ultimaBusqueda != null) {
@@ -208,7 +208,7 @@ public class MainWindowController implements Initializable {
 
 
 
-    // Método para formatear el costo de maná
+    // Metodo para formatear el costo de maná
     private String formatManaCost(String manaCost) {
         String noMana = "No mana cost";
         if (manaCost != null && !manaCost.isEmpty() && !manaCost.equals("{0}")) {
@@ -424,7 +424,7 @@ public class MainWindowController implements Initializable {
         return noMana;
     }
 
-    // Método para formatear los colores
+    // Metodo para formatear los colores
     private String formatColors(List<String> colors) {
         if (colors == null || colors.isEmpty()) {
             return "Colorless";

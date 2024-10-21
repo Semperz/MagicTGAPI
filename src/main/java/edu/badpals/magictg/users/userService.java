@@ -16,7 +16,7 @@ public class userService {
         objectMapper = new ObjectMapper();
     }
 
-    // Método para obtener todos los usuarios del JSON
+    // Metodo para obtener todos los usuarios del JSON
     public List<User> getUsers() {
         try {
             File file = new File(USERS_FILE);
@@ -33,7 +33,7 @@ public class userService {
         }
     }
 
-    // Método para guardar la lista de usuarios en el JSON
+    // Metodo para guardar la lista de usuarios en el JSON
     public void saveUsers(List<User> users) {
         try {
             objectMapper.writeValue(new File(USERS_FILE), users);
@@ -42,14 +42,14 @@ public class userService {
         }
     }
 
-    // Método para agregar un usuario al archivo JSON
+    // Metodo para agregar un usuario al archivo JSON
     public void addUser(User user) {
         List<User> users = getUsers(); // Obtener la lista actual de usuarios
         users.add(user); // Agregar el nuevo usuario
         saveUsers(users); // Guardar la lista actualizada
     }
 
-    // Método para buscar un usuario por ID
+    // Metodo para buscar un usuario por ID
     public User findUserById(String id) {
         List<User> users = getUsers();
         for (User user : users) {

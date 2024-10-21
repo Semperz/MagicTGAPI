@@ -10,7 +10,7 @@ import java.util.Map;
 public class CacheManager {
 
     private static final String CACHE_FILE = "src/main/resources/cache.json";
-    private static ObjectMapper objectMapper = new ObjectMapper();
+    private static final ObjectMapper objectMapper = new ObjectMapper();
 
     // Cargar la caché desde el archivo JSON
     public static Map<String, Object> cargarCache() {
