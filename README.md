@@ -32,7 +32,7 @@ La API de Magic: The Gathering es una API REST que permite obtener información 
 
 Utilizamos postman para realizar las peticiones a la API y obtener la información para corroborar que la application nos devuelve los datos que deseamos en el formato correcto.
 
-#### Ejemplos de URL para obtener información de una serie:
+#### Ejemplos de URL para obtener información de una carta:
 
    - **URL**:https://api.magicthegathering.io/v1/cards?name=Plains
    - **Método**: GET
@@ -59,7 +59,7 @@ Este proyecto ha sido desarrollado con las siguientes tecnologías:
 - **JavaFX**: Para la creación de la interfaz gráfica de usuario (GUI).
 - **FXML**: Lenguaje utilizado para diseñar las vistas de la aplicación.
 - **Maven**: Utilizado para la gestión de dependencias y la construcción del proyecto.
-- **API REST**: Para obtener los datos de series a través de solicitudes HTTP.
+- **API REST**: Para obtener los datos de cartas a través de solicitudes HTTP.
 - **W3C**: Para manejar el mappeado a XML y JSON.
 - **JDOM2**: Para manejar el mappeado a XML.
 ## 2. Estructura del Proyecto
@@ -273,8 +273,8 @@ Y se te guardará el resultado en un directorio llamado exports:
 - Si el usuario introduce credenciales incorrectas, se muestra un mensaje de error.
 
 2. **Uso de la aplicación offline** (en lugar de recurrir a la API, carga de ficheros en caché)
-- Se almacenan los datos de las series en un archivo JSON para poder acceder a ellos sin conexión.
-- Si no hay conexión a Internet, la aplicación carga los datos de las series desde el archivo JSON.
+- Se almacenan los datos de las cartas en un archivo JSON para poder acceder a ellos sin conexión.
+- Si no hay conexión a Internet, la aplicación carga los datos de las cartas desde el archivo JSON.
 
 3. **Almacenamiento del último estado de ejecución** de la aplicación (última consulta y resultados devueltos)
 - Se guarda el estado de la aplicación y después de iniciar sesión, se pregunta al usuario si desea restaurar la sesión anterior.
