@@ -43,14 +43,29 @@ Este proyecto tiene como finalidad crear una aplicación que permita consultar i
 
 ## Requisitos del Sistema
 ### Antes de comenzar, asegúrate de que tienes instalados los siguientes componentes en tu sistema:
+1. JDK 21: Necesario para compilar y ejecutar aplicaciones Java.
+2. JavaFX 17: Usado para la interfaz gráfica de usuario (GUI) en Java.
+3. Maven: Herramienta para la gestión de proyectos y dependencias en Java.
+4. Git: Sistema de control de versiones para gestionar el código fuente.
 
 ## Instrucciones de Instalación
 
 ### 1. Sitúate donde quieras crear la app:
 
+```bash
+cd C:\Users\nombredeusuario\Desktop
+```
 ### 2. Crea un directorio donde almacenar la app:
 
+```bash
+  mkdir Directory
+```
+
 ### 3.Sitúate en el directorio:
+
+```bash
+  cd Directory
+```
 
 ### 4.Instala los requisitos:
 
@@ -90,14 +105,33 @@ git --version
 ```
 ### 5. Clona el repositorio de la aplicación:
 
+```bash
+   git clone https://github.com/Semperz/MagicTGAPI.git
+```
+
 ### 6. Sitúate en el directorio del proyecto:
 
-### 7. Instala las dependencias del proyecto:
+```bash
+    cd MagicTGAPI
+  ```
 
+### 7. Instala las dependencias del proyecto:
+```bash
+    mvn  install
+```
 ### 8. Ejecuta la aplicación:
 #### Para Crear el JAR
 
+```bash
+    mvn clean package
+```
+
 #### Para ejecutar con el JAR
+
+```bash
+    
+ java --module-path="ruta al directorio del SDKS" --add-modules=javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.swing,javafx.media
+```
 
 # <u>Manual de Usuario</u>
 
