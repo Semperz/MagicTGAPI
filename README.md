@@ -83,8 +83,15 @@ El proyecto sigue el patrón de arquitectura **MVC (Model-View-Controller)**.
 2. **`MainWindowController`**: es la clase que maneja la pantalla principal, como se muestran las cartas y el botón para pasar a la ventana de exportación.
 
     - Métodos importantes:
-      - 
+      - **SearchInformation(ActionEvent event)**: Es la función principal y la que después de hacer *click* en el botón de buscar, hace la petición a la API (o al caché) para luego mostrar los datos con el siguiente método.
+      - **mostrarDatos(Response response, String nameInput)**: Después de buscar en la API (o en el caché), muestra en la pantalla principal las características que nosotros decidimos mostrar de cada carta.
+      - **cargarUltimaBusqueda(String nombreUsuario)**: carga la última búsqueda del usuario en el que se hizo un *Log In* exitoso y se haya buscado una carta.
+      - **toExportView(ActionEvent event)**: cambia a la **ventana de exportación (secondWindowController).**
+      - **toLogin(ActionEvent event)**: vuelve al *Log In* para volver a entrar con un usuario diferente o con el mismo.
+      - **closeApp(ActionEvent actionEvent)**: cierra la aplicación despues de darle al botón correspondiente.
+      - **fetchApiData()**: guarda la consulta a la API para que se pueda exportar en la **ventana de exportación**.
 
+3. **`secondWindowController`**: es la clase que maneja la ventana de exportación a los 4 tipos de archivo que se pidieron en la descripción del proyecto: JSON, BIN, TXT y XML. Además el usuario le debe de poner nombre. Si no se seleccionó ninguna carta, no se puso nombre o no dejaron el tipo de archivo en 
 
 ## <u>Estructura del código</u>
 
@@ -202,6 +209,49 @@ git --version
 # <u>Manual de Usuario</u>
 
 ## Inicio de Sesión
+
+Al abrir la aplicación, te llevará a la pantalla de LogIn:
+
+![Inicio sesion app](src/main/resources/img/PantallaLogIn.png)
+
+En ella deberás introducir tu nombre de usuario y contraseña:
+
+![Introducir_credenciales](src/main/resources/img/IntroducirCredenciales.png)
+
+Si introduces un usuario que no existe, te saltará un mensaje de error:
+
+![Error_usuario](src/main/resources/img/UsuarioIncorrecto.png)
+
+Si introduces un usuario que sí existe, te saldrá una notificación de que has iniciado sesión correctamente:
+
+![Pantalla_principal](src/main/resources/img/LogInExitoso.png)
+
+Ademas de preguntarte si quieres cargar la última búsqueda que hiciste:
+
+![Cargar_ultima_busqueda](src/main/resources/img/CargarUltimaBusqueda.png)
+
+Una vez has seleccionado si quieres cargar la última búsqueda o no, te llevará a la pantalla principal:
+En ella podrás buscar cartas por nombre, salir de la aplicación, volver a la pantalla e LogIn o ir a la pantalla de exportar datos.
+
+![Pantalla_principal](src/main/resources/img/MainView.png)
+
+
+Si decides ir a la pantalla de exportación de datos, esta sera tu vista:
+
+![Pantalla_exportData](src/main/resources/img/ExportData.png)
+
+En ella puedes elegir el formato en el que quieres exportar el archivo:
+
+![Pantalla_exportData](src/main/resources/img/SelectFormat.png)
+
+Una vez introducidos todos los datos y clickado el botón de exportar, te saltará un mensaje de aviso:
+
+![Pantalla_exportData](src/main/resources/img/ExportCorrectly.png)
+
+Y se te guardará el resultado en un directorio llamado exports:
+
+![Directory_Exports](src/main/resources/img/exportsDirectory.png)
+
 
 # Extras Realizados
 
