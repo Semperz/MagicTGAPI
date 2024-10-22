@@ -30,10 +30,14 @@ Este proyecto tiene como finalidad crear una aplicación que permita consultar i
 
 ## 2.2 Relación entre las clases 
 
-## 2.3 Descripción del paquete `modelo`
+## 2.3 Descripción del paquete `model`
+
+## 2.4 Descripción del paquete `service`
+
+## 2.5 Descripción del paquete `users`
 
 
-## 2.4 `src/main/resources` – Almacenamiento de FXML y Recursos
+## 2.6 `src/main/resources` – Almacenamiento de FXML y Recursos
 
 ### Subcarpetas clave y archivos:
 
