@@ -28,7 +28,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 
-import static edu.badpals.magictg.controller.secondWindowController.exportAlert;
+import static edu.badpals.magictg.controller.SecondWindowController.exportAlert;
 
 public class MainWindowController implements Initializable {
 
@@ -460,7 +460,7 @@ public class MainWindowController implements Initializable {
         try {
             if (apiData != null && !apiData.isEmpty()) {
                 // Pasar los datos de la API a la escena de exportación
-                secondWindowController.setApiData(apiData);
+                SecondWindowController.setApiData(apiData);
             }
             // Cargar la nueva vista desde el archivo FXML
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/exportView.fxml"));

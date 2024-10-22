@@ -10,11 +10,11 @@
 
 <?import javafx.collections.FXCollections?>
 <?import java.lang.String?>
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="797.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.badpals.magictg.controller.secondWindowController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="797.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.badpals.magictg.controller.SecondWindowController">
    <children>
       <AnchorPane prefHeight="625.0" prefWidth="797.0">
          <children>
-            <Button fx:id="btnVolver" layoutX="707.0" layoutY="555.0" mnemonicParsing="false" onAction="#toPeopleSearch" text="Volver" />
+            <Button fx:id="btnVolver" layoutX="707.0" layoutY="555.0" mnemonicParsing="false" onAction="#toCardSearch" text="Volver" />
             <Label layoutX="295.0" layoutY="42.0" text="Ventana de exportación">
                <font>
                   <Font name="Comic Sans MS Bold" size="18.0" />

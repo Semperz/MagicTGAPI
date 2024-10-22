@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class secondWindowController implements Initializable {
+public class SecondWindowController implements Initializable {
 
     private static String apiData;
     @FXML
@@ -31,7 +31,7 @@ public class secondWindowController implements Initializable {
     }
 
     @FXML
-    public void toPeopleSearch(ActionEvent event) {
+    public void toCardSearch(ActionEvent event) {
 
         try {
             // Cargar la nueva vista desde el archivo FXML
