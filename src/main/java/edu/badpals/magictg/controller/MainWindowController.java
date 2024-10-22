@@ -45,7 +45,7 @@ public class MainWindowController implements Initializable {
     private Label manaCost;
 
     @FXML
-    private Label colors;
+    private Label colorIdentity;
 
     @FXML
     private Label type;
@@ -187,7 +187,7 @@ public class MainWindowController implements Initializable {
 
             // Actualizamos los valores de los campos
             manaCost.setText(formatManaCost(card.getManaCost()));
-            colors.setText(formatColors(card.getColors()));
+            colorIdentity.setText(formatColors(card.getColorIdentity()));
             type.setText(String.valueOf(card.getType()));
 
             // Verifica si el poder es nulo

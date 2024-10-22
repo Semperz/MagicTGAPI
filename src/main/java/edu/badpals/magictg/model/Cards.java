@@ -14,8 +14,8 @@ public class Cards {
 	private String manaCost;
 	@JsonProperty("cmc")
 	private Object cmc;
-	@JsonProperty("colors")
-	private List<String> colors;
+	@JsonProperty("colorIdentity")
+	private List<String> colorIdentity;
 	@JsonProperty("type")
 	private String type;
 	@JsonProperty("subtypes")
@@ -34,8 +34,8 @@ public class Cards {
 	private String imageUrl;
 
 	//No importante
-	@JsonProperty("colorIdentity")
-	private List<String> colorIdentity;
+	@JsonProperty("colors")
+	private List<String> colors;
 	@JsonProperty("multiverseid")
 	private String multiverseid;
 	@JsonProperty("types")
