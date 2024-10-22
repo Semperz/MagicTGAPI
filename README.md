@@ -318,7 +318,7 @@ Y se te guardará el resultado en un directorio llamado exports:
 
 # Propuestas de Mejora para el profesor
 
-1. **Utilitarian un ejecutable en lugar de un .jar**
+1. **Utilizar un ejecutable en lugar de un .jar**
 
 # Conclusiones
 
