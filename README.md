@@ -11,18 +11,40 @@ Este proyecto tiene como finalidad crear una aplicación que permita consultar i
 
 #### Funcionalidades principales:
 
+- **Búsqueda de cartas:** La aplicación permite buscar cartas por nombre.
+- **Información detallada:** Muestra información detallada de las cartas, como su nombre, tipo, coste de maná, color, fuerza, resistencia e imagen.
+- **Interfaz gráfica:** La aplicación cuenta con una interfaz gráfica de usuario (GUI) que facilita la interacción con el usuario.
+- **API de Magic: The Gathering:** La aplicación utiliza la API de Magic: The Gathering para obtener información de las cartas.
+- **Gestión de errores:** La aplicación gestiona los errores que puedan surgir durante la búsqueda de cartas y muestra mensajes de error al usuario.
+- **LogIn y Usuarios:** La aplicación cuenta con un sistema de logIn de usuarios para poder acceder a la información de las cartas de forma personalizada.
+- **Últimas búsquedas:** La aplicación guarda las últimas búsquedas realizadas por el usuario.
+- **Caché:** La aplicación guarda las búsquedas en caché para no tener que recurrir siempre a la pi
 
 ### 1.2 Descripción de la API
 
+La API de Magic: The Gathering es una API REST que permite obtener información sobre las cartas del juego Magic: The Gathering. La información se devuelve en formato JSON y se puede acceder a ella mediante peticiones HTTP.
+
 #### Endpoints utilizados:
+
+- **GET https://api.magicthegathering.io/v1/cards?name={cardName}**: Devuelve la información de una carta específica buscando por nombre.
 
 ### 1.3 Ejemplo de solicitud API en POSTMAN
 
+Utilizamos postman para realizar las peticiones a la API y obtener la información para corroborar que la application nos devuelve los datos que deseamos en el formato correcto.
+
 #### Ejemplos de URL para obtener información de una serie:
+
+-**URL**:https://api.magicthegathering.io/v1/cards?name=Arcane Signet
 
 ### 1.4 Tecnologías utilizadas
 
 ## 2. Estructura del Proyecto
+
+El proyecto sigue el patrón de arquitectura **MVC (Model-View-Controller)**.
+
+- **Modelo**: Esta capa gestiona la lógica del negocio. Aquí se define la estructura de los datos (series, episodios, reparto) y las interacciones con la API.
+- **Vista**: Los archivos **FXML** definen la interfaz gráfica.
+- **Controlador**:
 
 ## 2.1 Descripción de las clases en el paquete `contoller`
 
@@ -38,6 +60,8 @@ Este proyecto tiene como finalidad crear una aplicación que permita consultar i
 
 
 ## 2.6 `src/main/resources` – Almacenamiento de FXML y Recursos
+
+La carpeta `src/main/resources` contiene todos los archivos necesarios para la interfaz gráfica de usuario y otros recursos estáticos.
 
 ### Subcarpetas clave y archivos:
 
@@ -80,7 +104,7 @@ cd C:\Users\nombredeusuario\Desktop
 
 - Verifica la instalación de Java ejecutando el siguiente comando en la terminal:
 ```bash
-java -version
+java --version
 
 ```
 #### Instalar JavaFX 17:
@@ -98,7 +122,7 @@ set PATH=%PATH%;ruta_a_javafx\lib
 - Añaade la ruta de la carpeta bin de Maven a la variable de entorno PATH.
 - Para verificar la instalación, ejecuta el siguiente comando en la terminal:
 ```bash
-mvn -version
+mvn --version
 ```
 #### Instalar Git:
 - Si no tienes Git instalado, descárgalo e instálalo desde [Git](https://git-scm.com/downloads).
