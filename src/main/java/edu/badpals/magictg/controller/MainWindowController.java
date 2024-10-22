@@ -125,7 +125,7 @@ public class MainWindowController implements Initializable {
     }
 
     @FXML
-    public void setNameCard(ActionEvent event) {
+    public void SearchInformation(ActionEvent event) {
         try {
             apiData = fetchApiData();
             String nameInput = URLEncoder.encode(search.getText(), StandardCharsets.UTF_8);

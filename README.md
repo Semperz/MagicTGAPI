@@ -34,19 +34,57 @@ Utilizamos postman para realizar las peticiones a la API y obtener la informaci�
 
 #### Ejemplos de URL para obtener información de una serie:
 
--**URL**:https://api.magicthegathering.io/v1/cards?name=Arcane Signet
+   - **URL**:https://api.magicthegathering.io/v1/cards?name=Plains
+   - **Método**: GET
+
+**Captura de Postman**:
+![Obtención de la información de una tierra](src/main/resources/img/CapturaDeTierra.png)
+
+   - **URL**:https://api.magicthegathering.io/v1/cards?name=Skullclamp
+   - **Método**: GET
+
+**Captura de Postman**:
+![Obtención de la información de un artefacto](src/main/resources/img/CapturaDeArtefacto.png)
+
+   - **URL**:https://api.magicthegathering.io/v1/cards?name=Cleanse
+   - **Método**: GET
+
+**Captura de Postman**:
+![Obtención de la información de una Sorcery](src/main/resources/img/CapturaDeSorcery.png)
 
 ### 1.4 Tecnologías utilizadas
 
+### 1.4 Tecnologías utilizadas
+Este proyecto ha sido desarrollado con las siguientes tecnologías:
+- **Java**: Lenguaje de programación principal utilizado.
+- **JavaFX**: Para la creación de la interfaz gráfica de usuario (GUI).
+- **FXML**: Lenguaje utilizado para diseñar las vistas de la aplicación.
+- **Maven**: Utilizado para la gestión de dependencias y la construcción del proyecto.
+- **API REST**: Para obtener los datos de series a través de solicitudes HTTP.
+- **W3C**: Para manejar el mappeado a XML y JSON.
+- **JDOM2**: Para manejar el mappeado a XML.
 ## 2. Estructura del Proyecto
 
 El proyecto sigue el patrón de arquitectura **MVC (Model-View-Controller)**.
 
-- **Modelo**: Esta capa gestiona la lógica del negocio. Aquí se define la estructura de los datos (series, episodios, reparto) y las interacciones con la API.
-- **Vista**: Los archivos **FXML** definen la interfaz gráfica.
-- **Controlador**:
+- **Model**: Esta capa gestiona la lógica. Aquí se define la estructura de los datos y las interacciones con la API.
+- **View**: Los archivos **FXML** definen la interfaz gráfica.
+- **Controller**: maneja la interacción entre el *model* y la *view*
 
-## 2.1 Descripción de las clases en el paquete `contoller`
+## 2.1 Descripción de las clases en el paquete `controller`
+
+1. **`LoginController`**: Esta clase maneja la funcionalidad de inicio de sesión de los usuarios. Permite que los usuarios ingresen sus credenciales y autentifica su acceso.
+
+   - Métodos importantes:
+      - tryToLogIN(): Autentifica al usuario y en caso de no existir en el JSON que guarda nuestros usuarios salta una ventana de error y no permite entrar.
+      
+      - loadMainView(): método que al pasar correctamente el anterior método mencionado te lleva a la pestaña principal
+
+2. **`MainWindowController`**: es la clase que maneja la pantalla principal, como se muestran las cartas y el botón para pasar a la ventana de exportación.
+
+    - Métodos importantes:
+      - 
+
 
 ## <u>Estructura del código</u>
 
